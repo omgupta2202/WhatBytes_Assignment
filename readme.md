@@ -25,15 +25,14 @@ A Django-based user authentication system with features like login, signup, pass
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/yourusername/yourrepository.git
-   cd yourrepository
+   git clone https://github.com/omgupta2202/WhatBytes_Assignment
+   cd WhatBytes_Assignment
    ```
 
 2. **Create virtual environment**:
    ```bash
    python -m venv .venv
-   source .venv/bin/activate  # For Linux/macOS
-   .venv\Scripts\activate  # For Windows
+   source .venv/bin/activate
    ```
 
 3. **Install dependencies**:
