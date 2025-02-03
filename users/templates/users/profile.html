@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+
+    <header>
+        <div class="navbar">
+            <a href="{% url 'profile' %}" class="nav-item">Profile</a>
+            <a href="{% url 'change-password' %}" class="nav-item">Change Password</a>
+            <a href="{% url 'logout' %}" class="nav-item">Logout</a>
+        </div>
+    </header>
+
+    <div class="container">
+        <h2>Your Profile</h2>
+
+        <div class="profile-info">
+            <p><strong>Username:</strong> {{ user.username }}</p>
+            <p><strong>Email:</strong> {{ user.email }}</p>
+            <p><strong>Joined:</strong> {{ date_joined }}</p>
+            <p><strong>Last login:</strong> {{ last_login }}</p>
+        </div>
+
+        <div class="profile-actions">
+            <a href="{% url 'dashboard' %}" class="btn-link">Dashboard</a><br>
+            <a href="{% url 'change-password' %}" class="btn-link">Change Password</a><br>
+            <a href="{% url 'logout' %}" class="btn-link">Logout</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>Thankyou!</p>
+    </footer>
+
+</body>
+</html>

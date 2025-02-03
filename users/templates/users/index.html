@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    {% load static %}  <!-- Load the static tag library -->
+    <link rel="stylesheet" href="{% static 'css/dashboard_css.css' %}">
+</head>
+<body>
+
+    <div class="dashboard-container">
+        <div class="greeting">
+            <h1>Hi, {{ username }}!</h1>
+            <p>Your dashboard</p>
+        </div>
+
+        <div class="tabs-container">
+            <div class="tab">
+                <a href="{% url 'profile' %}" class="tab-link">Profile</a>
+            </div>
+            <div class="tab">
+                <a href="{% url 'change-password' %}" class="tab-link">Change Password</a>
+            </div>
+            <div class="tab">
+                <a href="{% url 'logout' %}" class="tab-link">Logout</a>
+            </div>
+        </div>
+
+        <div class="stats">
+            <h3>Stats:</h3>
+            <ul>
+                <li><strong>Member since:</strong> {{ user.date_joined|date:"M d, Y" }}</li>
+                <li><strong>Last login:</strong> {{ user.last_login|date:"M d, Y" }}</li>
+            </ul>
+        </div>
+    </div>
+
+    <footer>
+        <p>Thank you!</p>
+    </footer>
+
+</body>
+</html>

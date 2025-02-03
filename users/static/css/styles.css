@@ -1,0 +1,85 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Navbar Styling */
+.navbar {
+    background-color: #3498db;
+    padding: 10px 20px;
+    text-align: right;
+}
+
+.nav-item {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    margin-left: 15px;
+    transition: color 0.3s ease;
+}
+
+.nav-item:hover {
+    color: #f1c40f;
+}
+
+/* Container Styling */
+.container {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Greeting Section */
+.greeting {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.greeting h1 {
+    font-size: 32px;
+    color: #3498db;
+}
+
+.greeting p {
+    font-size: 18px;
+    color: #7f8c8d;
+}
+
+/* Stats Section */
+.stats h3 {
+    font-size: 24px;
+    color: #3498db;
+    margin-bottom: 10px;
+}
+
+.stats ul {
+    list-style: none;
+}
+
+.stats li {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.stats li strong {
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    margin-top

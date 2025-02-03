@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+
+    <header>
+        <div class="navbar">
+            <a href="{% url 'login' %}" class="nav-item">Login</a>
+            <a href="{% url 'signup' %}" class="nav-item">Sign Up</a>
+        </div>
+    </header>
+
+    <div class="container">
+        <h2>Create Your Account</h2>
+
+        <form method="POST">
+            {% csrf_token %}
+            <div class="form-group">
+                {{ form.as_p }}
+            </div>
+            <button type="submit" class="btn-submit">Sign Up</button>
+        </form>
+
+        <p class="form-links">
+            Already have an account? <a href="{% url 'login' %}" class="link">Login</a>
+        </p>
+    </div>
+
+    <footer>
+        <p>Thankyou!</p>
+    </footer>
+
+</body>
+</html>
